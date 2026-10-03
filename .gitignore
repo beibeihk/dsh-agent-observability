@@ -1,0 +1,12 @@
+node_modules/
+lib/
+coverage/
+.dsh-test/
+.demo-home/
+artifacts/
+*.tgz
+.env*
+*.log
+.npmrc
+*.pem
+*.key

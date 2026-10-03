@@ -1,0 +1,30 @@
+{
+  "session": {
+    "id": "session-07b6ffed-8dbb-4a8d-acb1-deb9d149a1f1",
+    "inherited_event_count": 0,
+    "agent_id": "session-07b6ffed-8dbb-4a8d-acb1-deb9d149a1f1"
+  },
+  "turn_count": 1,
+  "step_count": 2,
+  "tool_call_count": 1,
+  "tool_success_count": 1,
+  "tool_failure_count": 0,
+  "tool_cancelled_count": 0,
+  "tool_error_rate": 0,
+  "retry_count": 0,
+  "model_request_count": 2,
+  "completion_status": "completed",
+  "session_duration_ms": 381,
+  "tool_duration_ms": 42,
+  "message_count": 7,
+  "request_series_count": 1,
+  "request_header_changes": 0,
+  "context_changes": 0,
+  "usage_coverage": 0,
+  "tool_schema_count": 25,
+  "integrity": {
+    "finalized": false,
+    "truncated": false,
+    "sequence_gaps": []
+  }
+}

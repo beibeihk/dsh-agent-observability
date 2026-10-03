@@ -1,0 +1,2 @@
+turn_count,step_count,tool_call_count,tool_success_count,tool_failure_count,tool_cancelled_count,tool_error_rate,retry_count,model_request_count,completion_status,session_duration_ms,tool_duration_ms,message_count,request_series_count,request_header_changes,context_changes,usage_coverage,tool_schema_count
+1,2,1,1,0,0,0,0,2,"completed",381,42,7,1,0,0,0,25

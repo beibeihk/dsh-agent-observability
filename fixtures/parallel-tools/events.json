@@ -1,0 +1,109 @@
+[
+  {
+    "type": "turn/start",
+    "seq": 0,
+    "time": 1000,
+    "data": {
+      "turn": 1
+    }
+  },
+  {
+    "type": "step/start",
+    "seq": 1,
+    "time": 1010,
+    "data": {
+      "turn": 1,
+      "step": 1
+    }
+  },
+  {
+    "type": "assistant/message",
+    "seq": 2,
+    "time": 1020,
+    "data": {
+      "turn": 1,
+      "step": 1,
+      "message": {
+        "content": [
+          {
+            "type": "text",
+            "text": "synthetic answer 0"
+          }
+        ]
+      },
+      "stream": []
+    }
+  },
+  {
+    "type": "tool/call",
+    "seq": 3,
+    "time": 1030,
+    "data": {
+      "turn": 1,
+      "step": 1,
+      "callId": "a",
+      "name": "lookup",
+      "arguments": "{\"id\":\"a\"}"
+    }
+  },
+  {
+    "type": "tool/call",
+    "seq": 4,
+    "time": 1040,
+    "data": {
+      "turn": 1,
+      "step": 1,
+      "callId": "b",
+      "name": "lookup",
+      "arguments": "{\"id\":\"b\"}"
+    }
+  },
+  {
+    "type": "tool/result",
+    "seq": 5,
+    "time": 1050,
+    "data": {
+      "turn": 1,
+      "step": 1,
+      "message": {
+        "toolCallId": "b",
+        "isError": false,
+        "content": []
+      }
+    }
+  },
+  {
+    "type": "tool/result",
+    "seq": 6,
+    "time": 1060,
+    "data": {
+      "turn": 1,
+      "step": 1,
+      "message": {
+        "toolCallId": "a",
+        "isError": false,
+        "content": []
+      }
+    }
+  },
+  {
+    "type": "step/end",
+    "seq": 7,
+    "time": 1070,
+    "data": {
+      "turn": 1,
+      "step": 1
+    }
+  },
+  {
+    "type": "turn/end",
+    "seq": 8,
+    "time": 1080,
+    "data": {
+      "turn": 1,
+      "reason": {
+        "kind": "completed"
+      }
+    }
+  }
+]

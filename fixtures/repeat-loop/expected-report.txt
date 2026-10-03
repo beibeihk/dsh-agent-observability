@@ -1,0 +1,29 @@
+Session Reliability Report
+Session: repeat-loop
+Status: completed
+Turns: 1 | Steps: 3 | Model requests (settled): 3
+Tool calls: 3 | Successes: 3 | Failures: 0 | Cancelled: 0
+Session duration: 160 ms
+Integrity: complete captured prefix
+
+Detected Issues:
+- F03 [warning] Consecutive equivalent tool calls within the configured window. (seq 3, 8, 13)
+
+Timeline:
+   0  turn/start
+   1  step/start
+   2  assistant/message [settled]
+   3  tool/call lookup #c1
+   4  tool/result #c1 [success]
+   5  step/end
+   6  step/start
+   7  assistant/message [settled]
+   8  tool/call lookup #c2
+   9  tool/result #c2 [success]
+  10  step/end
+  11  step/start
+  12  assistant/message [settled]
+  13  tool/call lookup #c3
+  14  tool/result #c3 [success]
+  15  step/end
+  16  turn/end [completed]

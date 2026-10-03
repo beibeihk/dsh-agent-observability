@@ -1,0 +1,1584 @@
+{
+  "date": "2026-10-03",
+  "environment": {
+    "node": "v24.12.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "dataset": {
+    "traces": 130,
+    "labels": "predeclared synthetic session-label pairs",
+    "tp": 130,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1,
+    "recall": 1
+  },
+  "microbenchmark": {
+    "events": 10000,
+    "rounds": 7,
+    "scope": "synchronous recorder only; baseline is a minimal event loop, not Harness end-to-end latency; filesystem excluded",
+    "performance": {
+      "baseline": {
+        "ms": 0.2056999999999789,
+        "events_per_second": 48614487.1171659,
+        "heap_delta_bytes": 400384,
+        "rss_delta_bytes": 0
+      },
+      "metadata-only": {
+        "ms": 96.39149999999995,
+        "events_per_second": 103743.58734950701,
+        "heap_delta_bytes": 10038024,
+        "rss_delta_bytes": 335872,
+        "added_ms_per_10k": 96.18579999999997,
+        "added_microseconds_per_event": 9.618579999999998,
+        "relative_to_minimal_baseline": 468.60233349542943
+      },
+      "content": {
+        "ms": 83.96799999999985,
+        "events_per_second": 119092.98780487827,
+        "heap_delta_bytes": 10086728,
+        "rss_delta_bytes": 262144,
+        "added_ms_per_10k": 83.76229999999987,
+        "added_microseconds_per_event": 8.376229999999987,
+        "relative_to_minimal_baseline": 408.2061254254179
+      }
+    },
+    "projection_ms": 35.452400000000125,
+    "serialization_ms": 7.83219999999983,
+    "jsonl_bytes": 1531519
+  },
+  "rows": [
+    {
+      "id": "normal-0",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "normal-1",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "normal-2",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "normal-3",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "normal-4",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "normal-5",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "normal-6",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "normal-7",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "normal-8",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "normal-9",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "recovery-0",
+      "expected": [
+        "T01"
+      ],
+      "actual": [
+        "T01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "recovery-1",
+      "expected": [
+        "T01"
+      ],
+      "actual": [
+        "T01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "recovery-2",
+      "expected": [
+        "T01"
+      ],
+      "actual": [
+        "T01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "recovery-3",
+      "expected": [
+        "T01"
+      ],
+      "actual": [
+        "T01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "recovery-4",
+      "expected": [
+        "T01"
+      ],
+      "actual": [
+        "T01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "recovery-5",
+      "expected": [
+        "T01"
+      ],
+      "actual": [
+        "T01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "recovery-6",
+      "expected": [
+        "T01"
+      ],
+      "actual": [
+        "T01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "recovery-7",
+      "expected": [
+        "T01"
+      ],
+      "actual": [
+        "T01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "recovery-8",
+      "expected": [
+        "T01"
+      ],
+      "actual": [
+        "T01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "recovery-9",
+      "expected": [
+        "T01"
+      ],
+      "actual": [
+        "T01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "repeat-0",
+      "expected": [
+        "F03"
+      ],
+      "actual": [
+        "F03"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "repeat-1",
+      "expected": [
+        "F03"
+      ],
+      "actual": [
+        "F03"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "repeat-2",
+      "expected": [
+        "F03"
+      ],
+      "actual": [
+        "F03"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "repeat-3",
+      "expected": [
+        "F03"
+      ],
+      "actual": [
+        "F03"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "repeat-4",
+      "expected": [
+        "F03"
+      ],
+      "actual": [
+        "F03"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "repeat-5",
+      "expected": [
+        "F03"
+      ],
+      "actual": [
+        "F03"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "repeat-6",
+      "expected": [
+        "F03"
+      ],
+      "actual": [
+        "F03"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "repeat-7",
+      "expected": [
+        "F03"
+      ],
+      "actual": [
+        "F03"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "repeat-8",
+      "expected": [
+        "F03"
+      ],
+      "actual": [
+        "F03"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "repeat-9",
+      "expected": [
+        "F03"
+      ],
+      "actual": [
+        "F03"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "error-loop-0",
+      "expected": [
+        "F04",
+        "T01"
+      ],
+      "actual": [
+        "T01",
+        "F04"
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "error-loop-1",
+      "expected": [
+        "F04",
+        "T01"
+      ],
+      "actual": [
+        "T01",
+        "F04"
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "error-loop-2",
+      "expected": [
+        "F04",
+        "T01"
+      ],
+      "actual": [
+        "T01",
+        "F04"
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "error-loop-3",
+      "expected": [
+        "F04",
+        "T01"
+      ],
+      "actual": [
+        "T01",
+        "F04"
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "error-loop-4",
+      "expected": [
+        "F04",
+        "T01"
+      ],
+      "actual": [
+        "T01",
+        "F04"
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "error-loop-5",
+      "expected": [
+        "F04",
+        "T01"
+      ],
+      "actual": [
+        "T01",
+        "F04"
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "error-loop-6",
+      "expected": [
+        "F04",
+        "T01"
+      ],
+      "actual": [
+        "T01",
+        "F04"
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "error-loop-7",
+      "expected": [
+        "F04",
+        "T01"
+      ],
+      "actual": [
+        "T01",
+        "F04"
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "error-loop-8",
+      "expected": [
+        "F04",
+        "T01"
+      ],
+      "actual": [
+        "T01",
+        "F04"
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "error-loop-9",
+      "expected": [
+        "F04",
+        "T01"
+      ],
+      "actual": [
+        "T01",
+        "F04"
+      ],
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "missing-0",
+      "expected": [
+        "F01"
+      ],
+      "actual": [
+        "F01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "missing-1",
+      "expected": [
+        "F01"
+      ],
+      "actual": [
+        "F01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "missing-2",
+      "expected": [
+        "F01"
+      ],
+      "actual": [
+        "F01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "missing-3",
+      "expected": [
+        "F01"
+      ],
+      "actual": [
+        "F01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "missing-4",
+      "expected": [
+        "F01"
+      ],
+      "actual": [
+        "F01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "missing-5",
+      "expected": [
+        "F01"
+      ],
+      "actual": [
+        "F01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "missing-6",
+      "expected": [
+        "F01"
+      ],
+      "actual": [
+        "F01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "missing-7",
+      "expected": [
+        "F01"
+      ],
+      "actual": [
+        "F01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "missing-8",
+      "expected": [
+        "F01"
+      ],
+      "actual": [
+        "F01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "missing-9",
+      "expected": [
+        "F01"
+      ],
+      "actual": [
+        "F01"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "duplicate-0",
+      "expected": [
+        "F02"
+      ],
+      "actual": [
+        "F02"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "duplicate-1",
+      "expected": [
+        "F02"
+      ],
+      "actual": [
+        "F02"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "duplicate-2",
+      "expected": [
+        "F02"
+      ],
+      "actual": [
+        "F02"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "duplicate-3",
+      "expected": [
+        "F02"
+      ],
+      "actual": [
+        "F02"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "duplicate-4",
+      "expected": [
+        "F02"
+      ],
+      "actual": [
+        "F02"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "duplicate-5",
+      "expected": [
+        "F02"
+      ],
+      "actual": [
+        "F02"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "duplicate-6",
+      "expected": [
+        "F02"
+      ],
+      "actual": [
+        "F02"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "duplicate-7",
+      "expected": [
+        "F02"
+      ],
+      "actual": [
+        "F02"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "duplicate-8",
+      "expected": [
+        "F02"
+      ],
+      "actual": [
+        "F02"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "duplicate-9",
+      "expected": [
+        "F02"
+      ],
+      "actual": [
+        "F02"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "retry-0",
+      "expected": [
+        "F05"
+      ],
+      "actual": [
+        "F05"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "retry-1",
+      "expected": [
+        "F05"
+      ],
+      "actual": [
+        "F05"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "retry-2",
+      "expected": [
+        "F05"
+      ],
+      "actual": [
+        "F05"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "retry-3",
+      "expected": [
+        "F05"
+      ],
+      "actual": [
+        "F05"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "retry-4",
+      "expected": [
+        "F05"
+      ],
+      "actual": [
+        "F05"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "retry-5",
+      "expected": [
+        "F05"
+      ],
+      "actual": [
+        "F05"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "retry-6",
+      "expected": [
+        "F05"
+      ],
+      "actual": [
+        "F05"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "retry-7",
+      "expected": [
+        "F05"
+      ],
+      "actual": [
+        "F05"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "retry-8",
+      "expected": [
+        "F05"
+      ],
+      "actual": [
+        "F05"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "retry-9",
+      "expected": [
+        "F05"
+      ],
+      "actual": [
+        "F05"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "long-0",
+      "expected": [
+        "F08"
+      ],
+      "actual": [
+        "F08"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "long-1",
+      "expected": [
+        "F08"
+      ],
+      "actual": [
+        "F08"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "long-2",
+      "expected": [
+        "F08"
+      ],
+      "actual": [
+        "F08"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "long-3",
+      "expected": [
+        "F08"
+      ],
+      "actual": [
+        "F08"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "long-4",
+      "expected": [
+        "F08"
+      ],
+      "actual": [
+        "F08"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "long-5",
+      "expected": [
+        "F08"
+      ],
+      "actual": [
+        "F08"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "long-6",
+      "expected": [
+        "F08"
+      ],
+      "actual": [
+        "F08"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "long-7",
+      "expected": [
+        "F08"
+      ],
+      "actual": [
+        "F08"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "long-8",
+      "expected": [
+        "F08"
+      ],
+      "actual": [
+        "F08"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "long-9",
+      "expected": [
+        "F08"
+      ],
+      "actual": [
+        "F08"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "high-errors-0",
+      "expected": [
+        "F04",
+        "T01",
+        "F09"
+      ],
+      "actual": [
+        "T01",
+        "F04",
+        "F09"
+      ],
+      "tp": 3,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "high-errors-1",
+      "expected": [
+        "F04",
+        "T01",
+        "F09"
+      ],
+      "actual": [
+        "T01",
+        "F04",
+        "F09"
+      ],
+      "tp": 3,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "high-errors-2",
+      "expected": [
+        "F04",
+        "T01",
+        "F09"
+      ],
+      "actual": [
+        "T01",
+        "F04",
+        "F09"
+      ],
+      "tp": 3,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "high-errors-3",
+      "expected": [
+        "F04",
+        "T01",
+        "F09"
+      ],
+      "actual": [
+        "T01",
+        "F04",
+        "F09"
+      ],
+      "tp": 3,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "high-errors-4",
+      "expected": [
+        "F04",
+        "T01",
+        "F09"
+      ],
+      "actual": [
+        "T01",
+        "F04",
+        "F09"
+      ],
+      "tp": 3,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "high-errors-5",
+      "expected": [
+        "F04",
+        "T01",
+        "F09"
+      ],
+      "actual": [
+        "T01",
+        "F04",
+        "F09"
+      ],
+      "tp": 3,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "high-errors-6",
+      "expected": [
+        "F04",
+        "T01",
+        "F09"
+      ],
+      "actual": [
+        "T01",
+        "F04",
+        "F09"
+      ],
+      "tp": 3,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "high-errors-7",
+      "expected": [
+        "F04",
+        "T01",
+        "F09"
+      ],
+      "actual": [
+        "T01",
+        "F04",
+        "F09"
+      ],
+      "tp": 3,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "high-errors-8",
+      "expected": [
+        "F04",
+        "T01",
+        "F09"
+      ],
+      "actual": [
+        "T01",
+        "F04",
+        "F09"
+      ],
+      "tp": 3,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "high-errors-9",
+      "expected": [
+        "F04",
+        "T01",
+        "F09"
+      ],
+      "actual": [
+        "T01",
+        "F04",
+        "F09"
+      ],
+      "tp": 3,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "churn-0",
+      "expected": [
+        "F10"
+      ],
+      "actual": [
+        "F10"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "churn-1",
+      "expected": [
+        "F10"
+      ],
+      "actual": [
+        "F10"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "churn-2",
+      "expected": [
+        "F10"
+      ],
+      "actual": [
+        "F10"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "churn-3",
+      "expected": [
+        "F10"
+      ],
+      "actual": [
+        "F10"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "churn-4",
+      "expected": [
+        "F10"
+      ],
+      "actual": [
+        "F10"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "churn-5",
+      "expected": [
+        "F10"
+      ],
+      "actual": [
+        "F10"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "churn-6",
+      "expected": [
+        "F10"
+      ],
+      "actual": [
+        "F10"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "churn-7",
+      "expected": [
+        "F10"
+      ],
+      "actual": [
+        "F10"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "churn-8",
+      "expected": [
+        "F10"
+      ],
+      "actual": [
+        "F10"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "churn-9",
+      "expected": [
+        "F10"
+      ],
+      "actual": [
+        "F10"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "abnormal-0",
+      "expected": [
+        "F07"
+      ],
+      "actual": [
+        "F07"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "abnormal-1",
+      "expected": [
+        "F07"
+      ],
+      "actual": [
+        "F07"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "abnormal-2",
+      "expected": [
+        "F07"
+      ],
+      "actual": [
+        "F07"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "abnormal-3",
+      "expected": [
+        "F07"
+      ],
+      "actual": [
+        "F07"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "abnormal-4",
+      "expected": [
+        "F07"
+      ],
+      "actual": [
+        "F07"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "abnormal-5",
+      "expected": [
+        "F07"
+      ],
+      "actual": [
+        "F07"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "abnormal-6",
+      "expected": [
+        "F07"
+      ],
+      "actual": [
+        "F07"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "abnormal-7",
+      "expected": [
+        "F07"
+      ],
+      "actual": [
+        "F07"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "abnormal-8",
+      "expected": [
+        "F07"
+      ],
+      "actual": [
+        "F07"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "abnormal-9",
+      "expected": [
+        "F07"
+      ],
+      "actual": [
+        "F07"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "cancel-0",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "cancel-1",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "cancel-2",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "cancel-3",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "cancel-4",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "cancel-5",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "cancel-6",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "cancel-7",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "cancel-8",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "cancel-9",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "parallel-0",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "parallel-1",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "parallel-2",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "parallel-3",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "parallel-4",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "parallel-5",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "parallel-6",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "parallel-7",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "parallel-8",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "id": "parallel-9",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    }
+  ],
+  "session_dispatch_benchmark": {
+    "events": 10000,
+    "rounds": 7,
+    "scope": "published Session.append + session/event observer; synthetic user messages; no model or disk I/O in timed region",
+    "timings": {
+      "baseline": {
+        "ms": 429.1917000000003,
+        "events_per_second": 23299.611805167697,
+        "heap_delta_bytes": 23325128,
+        "rss_delta_bytes": -1101824
+      },
+      "metadata-only": {
+        "ms": 771.1496999999999,
+        "events_per_second": 12967.650768715856,
+        "heap_delta_bytes": 19229464,
+        "rss_delta_bytes": 712704,
+        "added_ms_per_10k": 341.95799999999963,
+        "added_microseconds_per_event": 34.19579999999996,
+        "overhead_percent": 79.67488653671526
+      },
+      "content": {
+        "ms": 705.5573000000004,
+        "events_per_second": 14173.19330407324,
+        "heap_delta_bytes": 20061424,
+        "rss_delta_bytes": -2420736,
+        "added_ms_per_10k": 276.3656000000001,
+        "added_microseconds_per_event": 27.63656000000001,
+        "overhead_percent": 64.39211196302254
+      }
+    }
+  }
+}

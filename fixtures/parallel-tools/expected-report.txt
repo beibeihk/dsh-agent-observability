@@ -1,0 +1,21 @@
+Session Reliability Report
+Session: parallel-tools
+Status: completed
+Turns: 1 | Steps: 1 | Model requests (settled): 1
+Tool calls: 2 | Successes: 2 | Failures: 0 | Cancelled: 0
+Session duration: 80 ms
+Integrity: complete captured prefix
+
+Detected Issues:
+- None detected
+
+Timeline:
+   0  turn/start
+   1  step/start
+   2  assistant/message [settled]
+   3  tool/call lookup #a
+   4  tool/call lookup #b
+   5  tool/result #b [success]
+   6  tool/result #a [success]
+   7  step/end
+   8  turn/end [completed]

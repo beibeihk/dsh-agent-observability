@@ -1,0 +1,222 @@
+[
+  {
+    "type": "turn/start",
+    "seq": 0,
+    "time": 1000,
+    "data": {
+      "turn": 1
+    }
+  },
+  {
+    "type": "step/start",
+    "seq": 1,
+    "time": 1010,
+    "data": {
+      "turn": 1,
+      "step": 1
+    }
+  },
+  {
+    "type": "assistant/message",
+    "seq": 2,
+    "time": 1020,
+    "data": {
+      "turn": 1,
+      "step": 1,
+      "message": {
+        "content": [
+          {
+            "type": "text",
+            "text": "synthetic answer 0"
+          }
+        ]
+      },
+      "stream": []
+    }
+  },
+  {
+    "type": "tool/call",
+    "seq": 3,
+    "time": 1030,
+    "data": {
+      "turn": 1,
+      "step": 1,
+      "callId": "c1",
+      "name": "lookup",
+      "arguments": "{\"x\":1,\"y\":2}"
+    }
+  },
+  {
+    "type": "tool/result",
+    "seq": 4,
+    "time": 1040,
+    "data": {
+      "turn": 1,
+      "step": 1,
+      "message": {
+        "toolCallId": "c1",
+        "isError": false,
+        "content": [
+          {
+            "type": "text",
+            "text": "synthetic result"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "step/end",
+    "seq": 5,
+    "time": 1050,
+    "data": {
+      "turn": 1,
+      "step": 1
+    }
+  },
+  {
+    "type": "step/start",
+    "seq": 6,
+    "time": 1060,
+    "data": {
+      "turn": 1,
+      "step": 2
+    }
+  },
+  {
+    "type": "assistant/message",
+    "seq": 7,
+    "time": 1070,
+    "data": {
+      "turn": 1,
+      "step": 2,
+      "message": {
+        "content": [
+          {
+            "type": "text",
+            "text": "synthetic answer 0"
+          }
+        ]
+      },
+      "stream": []
+    }
+  },
+  {
+    "type": "tool/call",
+    "seq": 8,
+    "time": 1080,
+    "data": {
+      "turn": 1,
+      "step": 2,
+      "callId": "c2",
+      "name": "lookup",
+      "arguments": "{\"y\":2,\"x\":1}"
+    }
+  },
+  {
+    "type": "tool/result",
+    "seq": 9,
+    "time": 1090,
+    "data": {
+      "turn": 1,
+      "step": 2,
+      "message": {
+        "toolCallId": "c2",
+        "isError": false,
+        "content": [
+          {
+            "type": "text",
+            "text": "synthetic result"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "step/end",
+    "seq": 10,
+    "time": 1100,
+    "data": {
+      "turn": 1,
+      "step": 2
+    }
+  },
+  {
+    "type": "step/start",
+    "seq": 11,
+    "time": 1110,
+    "data": {
+      "turn": 1,
+      "step": 3
+    }
+  },
+  {
+    "type": "assistant/message",
+    "seq": 12,
+    "time": 1120,
+    "data": {
+      "turn": 1,
+      "step": 3,
+      "message": {
+        "content": [
+          {
+            "type": "text",
+            "text": "synthetic answer 0"
+          }
+        ]
+      },
+      "stream": []
+    }
+  },
+  {
+    "type": "tool/call",
+    "seq": 13,
+    "time": 1130,
+    "data": {
+      "turn": 1,
+      "step": 3,
+      "callId": "c3",
+      "name": "lookup",
+      "arguments": "{\"x\":1,\"y\":2}"
+    }
+  },
+  {
+    "type": "tool/result",
+    "seq": 14,
+    "time": 1140,
+    "data": {
+      "turn": 1,
+      "step": 3,
+      "message": {
+        "toolCallId": "c3",
+        "isError": false,
+        "content": [
+          {
+            "type": "text",
+            "text": "synthetic result"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "step/end",
+    "seq": 15,
+    "time": 1150,
+    "data": {
+      "turn": 1,
+      "step": 3
+    }
+  },
+  {
+    "type": "turn/end",
+    "seq": 16,
+    "time": 1160,
+    "data": {
+      "turn": 1,
+      "reason": {
+        "kind": "completed"
+      }
+    }
+  }
+]

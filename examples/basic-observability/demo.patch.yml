@@ -1,0 +1,13 @@
+- id: agent-default-model
+  config:
+    provider: fake-observability
+    model: deterministic
+- id: session-title-llm
+  disabled: true
+- id: agent-observability
+  config:
+    captureContent: false
+    outputDir: !!js process.env.DSH_OBSERVE_DEMO_OUTPUT
+- insert:
+    - id: observability-demo-adapter
+      name: './fake-adapter.mjs'

@@ -1,0 +1,15 @@
+# Normalized trace schema 1.0
+
+The TypeScript definitions in `src/types.ts` are the canonical versioned output vocabulary. A top-level trace contains `schema_version`, `source`, `session`, `privacy`, `integrity`, ordered `observations`, nested `turns`, `summary` and `findings`. `source` identifies the Harness adapter; downstream tools can map this structure to a cross-agent Session/Turn/Step/ToolCall representation without retaining Harness's internal objects.
+
+An observation has source Session identity, durable seq/type/time, optional Agent/turn/step/call/tool/provider/model fields, status, redacted payload fingerprint, authoritative usage when available, and source/replacement/inheritance markers. An envelope-only unknown event is retained by type and seq; its arbitrary body is excluded. The plugin does not reconstruct exact model-visible history or override `deriveMessages()`; it records replacement evidence rather than claiming all original messages remain visible.
+
+A tool record contains `call_seq`, `result_seqs`, start/end milliseconds, observed duration, normalized success/error/cancelled/pending outcome and error identity. Correlation is scoped to turn + step + call ID. A step contains request header/context snapshots when emitted, settled assistant observations and tool calls. An unchanged request envelope may emit no new header at that step; consumers must fold prior logged headers for effective route configuration, not assume absence means no request.
+
+`model_request_count` counts settled assistant attempts/messages, not header snapshots. `retry_count` is max(0, settlements - 1) within each step. Requests lost before settlement are absent. Input/output token totals are sums of reported successful-message counters, and total is their authoritative-counter sum. `usage_coverage` is accounted settlements / all settlements; uncommitted stream usage is deliberately not inspected. `context_window` is reported route capacity; utilization is not inferred. `message_count` counts appended message events, not current projected history length.
+
+`session_duration_ms` is the observed span from the first child-owned turn start to the latest child-owned turn event. It includes pauses between multiple turns, but restart markers and human commands after task completion do not extend it. Tool durations are summed even when tools overlap; this sum is not elapsed session wall time.
+
+JSONL exports **normalized observations**, not raw Harness session events. Each line is standalone JSON. Eval JSONL has one record per finding, with task Session metadata, logged configuration changes, normalized trace, label, severity, evidence seqs, outcome, privacy and integrity. A normal trace yields an empty eval file. Labels are pattern labels rather than task success ground truth.
+
+Partial snapshots explicitly mark bounds and sequence gaps; do not interpret them as complete evidence. Fork inherited events are available for lineage but excluded from child-owned metrics/findings. There is no arbitrarily weighted score and no hidden reasoning field.

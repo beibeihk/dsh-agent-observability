@@ -1,0 +1,5 @@
+- insert:
+    - id: agent-observability
+      name: '@beibeihk/dsh-agent-observability'
+      config:
+        captureContent: false

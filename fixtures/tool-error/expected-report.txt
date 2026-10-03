@@ -1,0 +1,24 @@
+Session Reliability Report
+Session: tool-error
+Status: completed
+Turns: 1 | Steps: 2 | Model requests (settled): 2
+Tool calls: 2 | Successes: 1 | Failures: 1 | Cancelled: 0
+Session duration: 110 ms
+Integrity: complete captured prefix
+
+Detected Issues:
+- T01 [info] Tool returned a structured error; this does not imply session failure. (seq 3, 4)
+
+Timeline:
+   0  turn/start
+   1  step/start
+   2  assistant/message [settled]
+   3  tool/call lookup #c1
+   4  tool/result #c1 [error]
+   5  step/end
+   6  step/start
+   7  assistant/message [settled]
+   8  tool/call lookup #c2
+   9  tool/result #c2 [success]
+  10  step/end
+  11  turn/end [completed]

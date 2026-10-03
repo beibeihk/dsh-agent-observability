@@ -1,0 +1,15 @@
+# Privacy
+
+The plugin sends no telemetry and has no network exporter. This statement applies to **this plugin**; Harness, its providers and other installed plugins have their own behavior.
+
+By default, payload observations contain the UTF-8 byte length and SHA-256 digest of a **redacted JSON representation**, not the complete prompt or output. This is a byte length, not a token estimate. Equivalent raw argument objects use a fresh recorder-local HMAC-SHA-256 key that is never exported, preventing direct dictionary verification of secret arguments. Object key order is canonicalized; array order remains semantic. HMACs change after remount and are not identifiers across sessions.
+
+`captureContent: true` enables redacted content with a 16 KiB per-payload retention bound by default (`maxContentBytes`). Truncation is marked explicitly and occurs after redaction. Secret field names (password, API key, authorization, cookies, access/refresh tokens, private keys and common secret env assignments), common token patterns, bearer credentials, JWTs, private-key blocks, and trusted custom regex patterns are filtered. Redaction applies to both values and serialized keys; opaque tool `meta`, request secrets and arbitrary plugin event bodies are never exported. Reasoning/thinking blocks and embedded streams remain excluded in every mode, including public provider reasoning. V1 deliberately makes no reasoning-summary capture promise.
+
+Pattern redaction is not a universal DLP system. Unrecognized credential formats, PII in otherwise ordinary prose, secrets inside unnamed binary fields, or deliberately obfuscated values can escape pattern matching if content capture is enabled. Add domain patterns before capture, restrict local directory access, and review reports before sharing. Session/tool/model names remain observable metadata and may themselves be sensitive. SHA-256 of redacted nonsecret text still permits dictionary tests on that nonsecret text. A custom regex is trusted local code-like configuration; avoid expressions with catastrophic backtracking.
+
+The source Harness session log is not rewritten or cleaned. Raw prompts may already exist in upstream persistence, and model-visible data may be sent by the chosen provider. This plugin cannot promise privacy for upstream storage or provider requests.
+
+On POSIX, files are created with mode 0600 and new directories with mode 0700. Windows inherits directory ACLs; mode bits do not create a Windows ACL policy. No captured credentials enter CI, examples, source control or the release tarball. Examples use conspicuously fake inputs and an offline model. Export failures report generic diagnostics rather than arbitrary exception text.
+
+Tests cover secrets in structured data, inline JSON, bearer/authorization/cookie headers, environment assignments, custom patterns, reasoning exclusion, HTML escaping, redaction idempotence and bounded retention. Metadata-only and content modes share redaction logic. The static report uses escaped HTML with a restrictive Content Security Policy and has no scripts or external assets.

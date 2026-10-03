@@ -1,0 +1,19 @@
+Session Reliability Report
+Session: normal-session
+Status: completed
+Turns: 1 | Steps: 1 | Model requests (settled): 1
+Tool calls: 1 | Successes: 1 | Failures: 0 | Cancelled: 0
+Session duration: 60 ms
+Integrity: complete captured prefix
+
+Detected Issues:
+- None detected
+
+Timeline:
+   0  turn/start
+   1  step/start
+   2  assistant/message [settled]
+   3  tool/call lookup #c1
+   4  tool/result #c1 [success]
+   5  step/end
+   6  turn/end [completed]

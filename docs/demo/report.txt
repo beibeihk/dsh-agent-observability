@@ -1,0 +1,34 @@
+Session Reliability Report
+Session: session-07b6ffed-8dbb-4a8d-acb1-deb9d149a1f1
+Status: completed
+Turns: 1 | Steps: 2 | Model requests (settled): 2
+Tool calls: 1 | Successes: 1 | Failures: 0 | Cancelled: 0
+Session duration: 381 ms
+Integrity: complete captured prefix
+
+Detected Issues:
+- None detected
+
+Timeline:
+   0  permission/preset
+   1  sandbox/mode
+   2  approval/policy
+   3  agent/inbox/spliced
+   4  turn/start
+   5  agent/inbox/spliced
+   6  step/start
+   7  system/message
+   8  user/message
+   9  user/message
+  10  user/message
+  11  request/header [initial]
+  12  request/context
+  13  session/title
+  14  assistant/message [settled]
+  15  tool/call observe_lookup #demo-call
+  16  tool/result #demo-call [success]
+  17  step/end
+  18  step/start
+  19  assistant/message [settled]
+  20  step/end
+  21  turn/end [completed]
