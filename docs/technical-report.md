@@ -40,6 +40,10 @@ Synthetic session/type labels: **TP=130, FP=0, FN=0**, precision **1.0**, recall
 
 The real offline CLI demo completed one turn, two steps, two settled model requests and one successful tool call, with zero findings. Its adapter does not report token usage, so the plugin leaves token totals absent and reports zero usage coverage. [Observed output](demo/report.txt), [trace](demo/trace.jsonl), [actual dashboard screenshot](demo/dashboard.jpg).
 
+An additional **credentialed smoke experiment** used the official published DeepSeek API-key provider and `deepseek-flash` alias, with thinking disabled and output capped at 128 tokens/request. Ten public marker-lookup tasks each completed exactly one successful tool call and returned the independently specified exact marker: 10/10 toy exact matches, 20 settled requests, 4,228 reported input tokens, 480 reported output tokens and zero rule findings. Median task elapsed time was approximately 7.45 s (upper middle order statistic for ten tasks). Requests used only scripted public text; the observer remained metadata-only. No private filesystem tools or session-log upload plugin was mounted. [Per-task results](experiments/live-results.json) · [Method](experiments/README.md).
+
+These ten trivially controlled tasks are operational evidence that the real provider, published loop, tool pipeline and observer work together. They are not independently annotated real-world tasks, a with/without causal performance comparison, or a failure-detector accuracy evaluation.
+
 ## Performance overhead
 
 The measured dataset is saved in [results.json](benchmarks/results.json). Timing figures below belong to the recorded local run; another machine or CI run can differ.
@@ -53,7 +57,7 @@ The measured dataset is saved in [results.json](benchmarks/results.json). Timing
 | Session dispatch metadata-only | 771.1497 | 12,968 | 34.1958 | 19,229,464 | 712,704 |
 | Session dispatch content | 705.5573 | 14,173 | 27.6366 | 20,061,424 | -2,420,736 |
 
-Metadata observation raises message-only Session dispatch time by **79.67%**; content mode raises it by **64.39%**. This is a meaningful cost in a CPU-heavy event workload, and should guide profiling before high-volume deployment. It is not an 79.67% increase in model-bound task time. The nearly empty recorder baseline is useful for absolute added time, not an informative end-to-end relative overhead denominator. Projection took 35.4524 ms and JSONL serialization 7.8322 ms for a 1,531,519-byte export in this run.
+Metadata observation raises message-only Session dispatch time by **79.67%**; content mode raises it by **64.39%**. This is a meaningful cost in a CPU-heavy event workload, and should guide profiling before high-volume deployment. It is not a 79.67% increase in model-bound task time. The nearly empty recorder baseline is useful for absolute added time, not an informative end-to-end relative overhead denominator. Projection took 35.4524 ms and JSONL serialization 7.8322 ms for a 1,531,519-byte export in this run.
 
 These medians vary with machine load; content mode being faster in this run is not evidence that content capture is inherently cheaper. Heap/RSS are pre/post deltas, not retained-size estimates or peak allocations. GC can make RSS negative or observed-mode heap smaller than baseline; neither implies negative allocation or a memory improvement. No peak-memory, worst-case-regex or multi-session load guarantee follows from this benchmark.
 
@@ -69,4 +73,4 @@ The plugin sends no telemetry. The demo opts out of Harness telemetry separately
 
 Compatibility is intentionally restricted to published `0.2.0-rc.2` (the npm `latest` tag at audit), Cordis 4.0.4, and the tested event vocabulary; `0.2.1-alpha.1` is not claimed. Reported usage covers successful assistant-message counters, not all interrupted/retried attempts. Message count measures appended message records, not current model-visible history after replacements. Request/header and context changes are observable churn, not evidence of harmful churn. Source-file watcher HMR stress, multi-agent interleavings, PTC subcall internals, peak memory and diverse real tasks remain unmeasured.
 
-No paid or credentialed real-model task experiment was run. The next useful study would preregister varied public tasks, annotate failures independently and blindly, include purposeful repeated calls as negatives, and measure event load alongside end-to-end latency. Labels exported today are rule labels, not reward-model supervision or validated causal attributions. Adding task-outcome assessors should preserve that distinction.
+Beyond the ten controlled credentialed smoke tasks, no varied real-world task benchmark was run. The next useful study would preregister varied public tasks, annotate failures independently and blindly, include purposeful repeated calls as negatives, and measure event load alongside end-to-end latency. Labels exported today are rule labels, not reward-model supervision or validated causal attributions. Adding task-outcome assessors should preserve that distinction.

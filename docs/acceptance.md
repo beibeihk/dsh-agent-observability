@@ -13,7 +13,7 @@ Release code commit: `117cc4f52123bf3019ad9b6c2fa02fd0bb3cda64`. Public communit
 | Local checks | `npm run validate`, `npm run test:coverage`, `npm run benchmark`, `npm run demo`, release audit and `npm publish --dry-run --ignore-scripts --access public` passed |
 | Coverage | 36 tests; recorded local line coverage 96.45%, branches 89.86%; no claim that coverage proves all privacy properties |
 | Remote CI | [Node 22.19 and 24 / Ubuntu run](https://github.com/beibeihk/dsh-agent-observability/actions/runs/37120114069), both jobs succeeded including actual CLI install/run |
-| Benchmark | [130 synthetic traces and 10,000-event results](benchmarks/results.json); TP=130, FP=0, FN=0 on designed session/type labels only |
+| Benchmark | [130 synthetic traces and 10,000-event results](benchmarks/results.json); TP=130, FP=0, FN=0 on designed session/type labels only; [ten real-provider public smoke tasks](experiments/live-results.json) completed with 10 exact marker matches and 20 settled requests |
 | Performance | Recorded default recorder +9.62 μs/event; real Session dispatch +34.20 μs/event (+79.67% in message-only scope); no end-to-end latency claim |
 | Documentation | English/Chinese README, architecture, privacy, schema, integration, compatibility, taxonomy, three ADRs, five golden fixtures, technical report and blog draft |
 | Learning material | [Study guide](../DEEPSEEK_HARNESS_STUDY_GUIDE.md) with 35 answered questions, module invariants and hands-on exercises; [profile/CV text](../PROFILE_SNIPPET.md) |
@@ -24,4 +24,4 @@ Release code commit: `117cc4f52123bf3019ad9b6c2fa02fd0bb3cda64`. Public communit
 
 Tarball SHA256: `6445dc25e3e1af9cb8b039240df97ba295272e59c72c942dcd8926652b12e3d9`.
 
-Known limits are documented rather than marked as completed features: F06/task-progress judge, source-watcher HMR stress, independently annotated real-world tasks, OpenTelemetry/remote telemetry, full PTC internals, cross-version support and automatic disk pruning. Files are individually atomic; no multi-file or fsync guarantee. No paid real-model experiment was run.
+Known limits are documented rather than marked as completed features: F06/task-progress judge, source-watcher HMR stress, independently annotated real-world tasks, OpenTelemetry/remote telemetry, full PTC internals, cross-version support and automatic disk pruning. Files are individually atomic; no multi-file or fsync guarantee. The ten credentialed marker tasks are an exploratory operational smoke test, not real-world accuracy evidence.

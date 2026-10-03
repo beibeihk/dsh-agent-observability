@@ -44,6 +44,8 @@ JSONL 是逐 observation 的分析出口，summary JSON/CSV 是 session 层指�
 
 ## 后续值得研究的问题
 
+发布后补充的真实 provider smoke test 使用官方 API-key adapter 和 `deepseek-flash`，关闭 thinking，以 128 token/请求为上限。十个公开 marker lookup 任务都完成一次工具调用并返回预期标记，共 20 次请求、输入 4,228 token、输出 480 token，没有规则 findings。它验证了真实 provider 与 loop/observer 的协作，但任务过于受控，不能当作真实世界准确率。[逐任务结果](experiments/live-results.json)。
+
 首先建立独立标注的公开任务集，保留有意 polling 等容易误报的负例，再评估阈值在不同工具和模型之间是否稳定。其次对高事件密度、多 session 和长内容进行 profiling，测峰值内存与任务尾延迟。最后才考虑引入 task-outcome judge，并把规则证据、人工标签和模型评价明确分开。
 
 当前交付是一条可安装、可测试、可回溯的观测路径。它的价值在于让后续可靠性研究有明确的数据来源、边界和可复现实验，而不是声称仅靠 trace 就能理解全部 Agent 失败原因。

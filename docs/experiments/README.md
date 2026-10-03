@@ -1,0 +1,11 @@
+# Credentialed operational smoke experiment
+
+Opt-in only; not part of CI. Run `npm ci --ignore-scripts`, `npm run build`, then `node scripts/live-experiment.mjs --run-paid` when an authorized `DEEPSEEK_API_KEY` is already present in the inherited environment. Never paste a credential into the script, source control or a task report. This command makes paid model requests.
+
+The script uses the published Harness 0.2.0-rc.2 Agent loop, Session/query, tools and the official `@deepseek-ai/dsh-llm-deepseek-api-key` provider already supplied by the pinned full Harness development dependency. Endpoint is explicitly `https://api.deepseek.com/anthropic`; the key remains an environment reference resolved by the official provider. No private directory/file tools, session-log upload, account credentials or user prompts are loaded. A toy `public_lookup` tool returns a fully public marker. Agent history consists only of the scripted public task and tool interaction.
+
+Model alias: `deepseek-flash`; thinking disabled; maximum 128 output tokens/request; each task has a 60-second cancellation deadline. There is no claim of deterministic model behavior or stable alias resolution. This is the documented [official thinking switch](https://api-docs.deepseek.com/guides/thinking_mode/), applied through the published provider's config.
+
+Recorded run: 2026-10-03 11:46:08–11:47:23 UTC, ten tasks. All completed with exactly one successful tool call and the expected final marker. There were 20 settled requests, 4,228 reported input tokens, 480 reported output tokens and zero rule findings. Upper-middle elapsed order statistic: 7.447 seconds. The [JSON](live-results.json) stores each public prompt, independently specified expected marker, final public text, reported metrics and findings. Observer capture remained metadata-only; per-session traces remain under ignored `artifacts/live`.
+
+There is no blinded ground truth, realistic task diversity, real failure case or with/without observer control in this experiment. Do not describe 10/10 marker matches as agent accuracy, detector accuracy or a performance result. The offline synthetic dataset and controlled semantic comparison answer different questions.
